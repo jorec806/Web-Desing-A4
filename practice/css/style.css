@@ -12,18 +12,100 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
 }
 
 body {
   background-color: #efefef;
 }
 
+h1 {
+  font-size: 80px;
+  font-family: "Josefin Slab", system-ui;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 50px;
+  font-family: "Josefin Slab", system-ui;
+  font-weight: 700;
+}
+
+.principal {
+  width: 100%;
+  height: 100vh;
+  background-color: #ce3939;
+  background-image: url("/practice/images/backgrounds/hero1.jpg");
+  background-size: cover;
+}
+
 .nav {
-  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px 10px 20px;
+}
+
+.navigator-links {
+  display: flex;
+}
+
+.link {
+  padding: 10px 30px 10px 30px;
+  text-decoration: none;
+}
+
+.link:visited {
+  color: inherit;
+}
+
+.link:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+
+.button {
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ce3939;
+  color: white;
+  box-shadow: 2px 2px 10px -1px rgb(46, 46, 46);
+}
+
+.button:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s;
+}
+
+.container {
+  max-width: 1440px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
 }
 
 .header {
-  background-color: yellow;
+  display: flex;
+  justify-content: end;
+  padding: 180px 150px 200px 0px;
+}
+
+.header-text {
+  max-width: 600px;
+}
+
+.header-description {
+  font-size: 40px;
+  padding-top: 20px;
+}
+
+.header-description-dinamic {
+  font-size: 40px;
+  font-weight: 400;
+  padding-bottom: 30px;
 }
 
 .recipes {
