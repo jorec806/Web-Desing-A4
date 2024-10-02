@@ -50,6 +50,17 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px 10px 20px;
+  height: 80px;
+}
+
+.logo {
+  height: 100%;
+}
+
+.logo img {
+  width: 100%; /* La imagen tomará el ancho completo del div */
+  height: 100%; /* La imagen tomará el alto completo del div */
+  object-fit: contain;
 }
 
 .navigator-links {
@@ -93,12 +104,20 @@ p {
 
 .header {
   display: flex;
-  justify-content: end;
-  padding: 180px 150px 200px 0px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
+.header-empty {
+  width: 50%;
+  height: 100%;
+}
 .header-text {
-  max-width: 600px;
+  width: 50%;
+  padding-top: 100px;
 }
 
 .header-description {
@@ -136,6 +155,7 @@ p {
 
 .recipes {
   display: flex;
+  padding-bottom: 100px;
 }
 
 .recipes-script {
@@ -152,6 +172,9 @@ p {
 .recipes-type {
   width: 50%;
   padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .recipe-grid {
@@ -237,7 +260,37 @@ p {
 }
 
 .custom-recipes {
-  background-color: lightcoral;
+  display: flex;
+  padding-bottom: 100px;
+}
+
+.custom-recipe-flip {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-recipe-flip div {
+  background-image: url("/practice/images/dishes/dish1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  height: 400px;
+  width: 400px;
+}
+
+.custom-recipe-script {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-recipe-script p {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .community {
