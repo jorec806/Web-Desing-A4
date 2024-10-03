@@ -5,12 +5,40 @@
   background-size: cover;
 }
 
+@media (max-width: 480px) {
+  .principal {
+    background-image: none;
+  }
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px 10px 20px;
   height: 80px;
+}
+
+.nav-responsive {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .nav {
+    display: none;
+  }
+
+  .nav-responsive {
+    display: flex;
+    height: 60px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav-responsive svg {
+    width: 50px;
+    margin-right: 10px;
+  }
 }
 
 .logo {
@@ -57,13 +85,49 @@
   padding-bottom: 100px;
 }
 
+@media (max-width: 480px) {
+  .header {
+    padding-top: 30px;
+  }
+}
+
 .header-empty {
   width: 50%;
   height: 100%;
 }
+
+@media (max-width: 480px) {
+  .header-empty {
+    display: none;
+  }
+}
+
 .header-text {
   width: 50%;
   padding-top: 100px;
+}
+
+@media (max-width: 480px) {
+  .header-text {
+    width: 80%;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  .header-title {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+.header__logo {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .header__logo {
+    display: block;
+  }
 }
 
 .header-description {
@@ -77,10 +141,28 @@
   padding-bottom: 30px;
 }
 
+@media (max-width: 480px) {
+  .header-description {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .header-description-dinamic {
+    text-align: center;
+    font-size: 30px;
+  }
+}
+
 .carrousel-container {
   width: 100%;
   overflow: hidden;
   padding-bottom: 80px;
+}
+
+@media (max-width: 480px) {
+  .carrousel-container {
+    display: none;
+  }
 }
 
 .carrousel {
@@ -104,6 +186,13 @@
   padding-left: 100px;
 }
 
+@media (max-width: 480px) {
+  .subsection--recipes-script {
+    width: 90%;
+    padding: 20px 0;
+  }
+}
+
 .subsection--recipes-script p {
   padding: 40px 0 40px 0;
 }
@@ -116,6 +205,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .recipes-type {
+    padding-top: 10px;
+  }
 }
 
 .recipe-grid {
@@ -132,6 +227,13 @@
   height: 200px;
   border-radius: 20px;
   transition: 0.2s ease-in-out;
+}
+
+@media (max-width: 480px) {
+  .recipe-types-container {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .recipe-types-container:hover {
@@ -251,6 +353,7 @@
 .section--members {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .section__title {

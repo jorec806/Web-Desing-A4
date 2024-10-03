@@ -28,12 +28,31 @@ h1 {
   font-weight: 700;
 }
 
+@media (max-width: 480px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+
 h2 {
   font-size: 60px;
   font-family: "Josefin Slab", system-ui;
   font-weight: 700;
 }
 
+@media (max-width: 480px) {
+  h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
 p {
   font-size: 30px;
+}
+
+@media (max-width: 480px) {
+  p {
+    font-size: 20px;
+  }
 }

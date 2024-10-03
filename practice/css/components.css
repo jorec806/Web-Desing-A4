@@ -9,6 +9,20 @@
   font-size: 1rem;
 }
 
+.button-responsive {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .button {
+    display: none;
+  }
+
+  .button-responsive {
+    display: block;
+  }
+}
+
 .button:hover {
   background-color: var(--button-crimson-darker);
   transform: scale(1.05);
@@ -23,10 +37,23 @@
   padding: 50px 50px;
 }
 
+@media (max-width: 480px) {
+  .section {
+    padding: 20px 20px;
+  }
+}
+
 .subsection {
   width: 50%;
   min-width: 500px;
   padding: 50px 0;
+}
+
+@media (max-width: 480px) {
+  .subsection {
+    min-width: unset;
+    width: 90%;
+  }
 }
 
 .option {
