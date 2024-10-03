@@ -2,13 +2,13 @@
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
-  background-color: #ce3939;
-  color: white;
+  background-color: var(--button-crimson);
+  color: var(--text-white);
   box-shadow: 2px 2px 10px -1px rgb(46, 46, 46);
 }
 
 .button:hover {
-  background-color: #b83232;
+  background-color: var(--button-crimson-darker);
   transform: scale(1.05);
   transition: transform 0.5s;
 }

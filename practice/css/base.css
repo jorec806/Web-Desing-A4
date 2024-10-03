@@ -8,8 +8,15 @@
     font-style: normal;
 }*/
 
+:root {
+  --background-light: #efefef;
+  --button-crimson: #ce3939;
+  --button-crimson-darker: #b83232;
+  --text-white: #ffffff;
+}
+
 body {
-  background-color: #efefef;
+  background-color: var(--background-light);
   font-size: 16px;
   font-family: "Roboto Mono", monospace;
   font-weight: 300;
@@ -34,7 +41,6 @@ p {
 .principal {
   width: 100%;
   height: 100vh;
-  background-color: #ce3939;
   background-image: url("/practice/images/backgrounds/hero1.jpg");
   background-size: cover;
 }
