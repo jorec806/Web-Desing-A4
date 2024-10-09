@@ -322,11 +322,41 @@
   width: 400px;
 }
 
+@media (max-width: 480px) {
+  .custom-recipe-flip {
+    display: none;
+  }
+}
+
 .custom-recipe-script {
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .custom-recipe-script {
+    width: 90%;
+  }
+}
+
+.recipe-flip-responsive {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .recipe-flip-responsive {
+    display: block;
+    background-image: url("/practice/images/dishes/dish10.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    padding: 0;
+    margin-bottom: 50px;
+  }
 }
 
 .custom-recipe-script p {
@@ -337,6 +367,13 @@
 .subsection--script {
   width: 50%;
   padding-left: 150px;
+}
+
+@media (max-width: 480px) {
+  .subsection--script {
+    width: 90%;
+    padding: 50px 0 0 0;
+  }
 }
 
 .subsection--script p {
@@ -360,10 +397,22 @@
   padding-bottom: 50px;
 }
 
+@media (max-width: 480px) {
+  .section__title {
+    width: 100%;
+  }
+}
+
 .card-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    display: none;
+  }
 }
 
 .footer {
@@ -381,7 +430,20 @@
   align-items: center;
 }
 
+@media (max-width: 480px) {
+  .footer div {
+    width: 50%;
+  }
+}
+
 .footer p {
   color: white;
   font-size: 20px;
+}
+
+/* RECIPES PAGE */
+
+.recipes-title {
+  text-align: center;
+  padding: 30px 0;
 }
