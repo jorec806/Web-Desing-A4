@@ -23,9 +23,9 @@
           <img src="/practice/images/logo/recipe_logo.png" alt="page-logo" />
         </div>
         <div class="navigator-links">
-          <a class="link" href="">Custom</a>
-          <a class="link" href="">Rating</a>
+          <a class="link" href="/index.html">Home</a>
           <a class="link" href="">Recipes</a>
+          <a class="link" href="">Custom</a>
           <button class="button login-button">Log in</button>
         </div>
       </nav>
@@ -48,51 +48,20 @@
     </nav>
     <h1 class="recipes-title">RECIPES</h1>
     <!-- Recipes Display Section -->
-    <main>
-      <div class="container">
-        <div class="recipe-card">
-          <div class="recipe-card__img"></div>
-          <div class="recipe-card__script">
-            <p class="recipe-card__title">Bruschetta</p>
-            <div class="recipe-card__rating">
-              <img src="/practice/images/icons/yellow-star.svg" alt="" />
-            </div>
-            <p class="recipe-card__description">
-              Like the “dump and bake” Fried Rice. I shared a few weeks ago
-            </p>
-            <div class="recipe-card__interactables">
-              <div class="recipe-card__interactable">
-                <img
-                  class="card__interactables__img"
-                  src="/practice/images/icons/heart-235.svg"
-                  alt=""
-                />
-                <p class="card__interactables__text">24</p>
-              </div>
-              <div class="recipe-card__interactable">
-                <img
-                  class="card__interactables__img"
-                  src="/practice/images/icons/star-1-icon-256x253-3menv6cb.png"
-                  alt=""
-                />
-                <p class="card__interactables__text">17</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="button">See More</button>
+    <main class="recipe-display">
+      <div class="recipe__container" id="recipeContainer"></div>
+      <button class="recipe__button button" id="recipeButton">See More</button>
     </main>
     <footer class="footer">
-      <div>
-        <p>©2024 Jose Ore, Inc All rights reserved</p>
-      </div>
+      <p>©2024 Jose Ore, Inc All rights reserved</p>
       <div class="social-media">
         <img src="/practice/images/logo/fb-logo.png" alt="" />
         <img src="/practice/images/logo/Instagram-logo.png" alt="" />
         <img src="/practice/images/logo/tiktok-logo.png" alt="" />
       </div>
     </footer>
-    <script src="/js/fetch.js"></script>
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/api.js"></script>
+    <script type="module" src="/js/dom.js"></script>
   </body>
 </html>
