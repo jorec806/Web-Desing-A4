@@ -69,7 +69,7 @@ async function renderMeal(parent) {
     const stars = Math.ceil(Math.random() * 100);
     const favourites = Math.floor(Math.random() * (5 - 3 + 1)) + 3;
 
-    const ratingStar = `<img src="/practice/images/icons/yellow-star.svg" alt="" />`;
+    const ratingStar = `<img src="images/icons/yellow-star.svg" alt="" />`;
 
     const newCard = document.createElement("div");
     newCard.innerHTML = `
@@ -89,7 +89,7 @@ async function renderMeal(parent) {
               <div class="recipe-card__interactable">
                 <img
                   class="card__interactables__img"
-                  src="/practice/images/icons/heart-235.svg"
+                  src="images/icons/heart-235.svg"
                   alt=""
                 />
                 <p class="card__interactables__text">${hearts}</p>
@@ -97,7 +97,7 @@ async function renderMeal(parent) {
               <div class="recipe-card__interactable">
                 <img
                   class="card__interactables__img"
-                  src="/practice/images/icons/star-1-icon-256x253-3menv6cb.png"
+                  src="images/icons/star-1-icon-256x253-3menv6cb.png"
                   alt=""
                 />
                 <p class="card__interactables__text">${stars}</p>
@@ -110,4 +110,71 @@ async function renderMeal(parent) {
     console.error("Error rendering the meal:", error);
   }
 }
-export { renderMeal };
+
+async function renderRecipe() {
+  try {
+    const mealID = localStorage.getItem("selectedMealID");
+    const meal = await getMealInfo(mealID);
+
+    console.log(meal);
+
+    const mealIngredients = [];
+    for (let i = 1; i <= 20; i++) {
+      let ingredient = `strIngredient${i}`;
+      let measure = `strMeasure${i}`;
+
+      if (meal[ingredient]) {
+        mealIngredients.push(`${meal[measure]} of ${meal[ingredient]}`);
+      }
+    }
+
+    //Setting variables info
+    const mealName = meal.strMeal;
+    const mealInstructions = meal.strInstructions;
+    const mealPic = meal.strMealThumb;
+
+    //List of ingredients
+    function printIngredients(listOfIngredients) {
+      let list = "";
+      for (items in listOfIngredients) {
+        ingred = `• ${ingred}<br />`;
+        list += ingred;
+      }
+
+      return list;
+    }
+
+    //Creating the new HTML
+    const recipeInfo = `
+    <div class="display__info">
+      <div class="display__info-img">
+        <img src="${mealPic}" alt="" />
+      </div>
+      <div class="display__info-ingredients">
+        <p class="info-ingredients__title">${mealName}</p>
+        <p class="info-ingredients__description">
+          INGREDIENTS:<br /><br />
+          ${printIngredients(mealIngredients)}
+        </p>
+      </div>
+    </div>
+    <div class="display__process">
+      <div class="process--container">
+        <p class="process__title">PROCESS:</p>
+        <div class="process__box">
+          <p class="info-ingredients__description">
+          ${mealInstructions}
+          </p>
+        </div>
+      </div>
+    </div>`;
+
+    //Clear HTML
+  } catch (error) {
+    console.error("Error rendering the meal recipe:", error);
+  }
+}
+
+renderRecipe();
+
+export { renderMeal, renderRecipe };

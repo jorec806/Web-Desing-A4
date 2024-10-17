@@ -1,7 +1,7 @@
 .principal {
   width: 100%;
   height: 100vh;
-  background-image: url("/practice/images/backgrounds/hero1.jpg");
+  background-image: url("/assessment/images/backgrounds/hero1.jpg");
   background-size: cover;
 }
 
@@ -46,8 +46,8 @@
 }
 
 .logo img {
-  width: 100%; /* La imagen tomará el ancho completo del div */
-  height: 100%; /* La imagen tomará el alto completo del div */
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -313,7 +313,7 @@
 }
 
 .custom-recipe-flip div {
-  background-image: url("/practice/images/dishes/dish1.jpg");
+  background-image: url("/assessment/images/dishes/dish1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -348,7 +348,7 @@
 @media (max-width: 480px) {
   .recipe-flip-responsive {
     display: block;
-    background-image: url("/practice/images/dishes/dish10.jpg");
+    background-image: url("/assessment/images/dishes/dish10.jpg");
     background-size: cover;
     background-position: center;
     width: 340px;
@@ -511,5 +511,21 @@
 }
 
 .display__process {
-  background-color: rgb(88, 82, 255);
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.process--container {
+  width: 80%;
+}
+
+.process__box {
+  background-color: white;
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  border: solid black 3px;
+  border-radius: 15px;
 }

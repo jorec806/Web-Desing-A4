@@ -1,3 +1,4 @@
 //Dom Manipulation
+const displayedMeal = localStorage.getItem("selectedMealID");
 
-const recipeContainer = document.getElementById("recipeContainer");
+console.log(displayedMeal);

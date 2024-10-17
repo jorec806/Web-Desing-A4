@@ -3,15 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/practice/css/reset.css" />
-    <link rel="stylesheet" href="/practice/css/base.css" />
-    <link rel="stylesheet" href="/practice/css/layout.css" />
-    <link rel="stylesheet" href="/practice/css/components.css" />
-    <link
-      rel="icon"
-      href="/practice/images/logo/recipe_logo.png"
-      type="image/png"
-    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="icon" href="images/logo/recipe_logo.png" type="image/png" />
     <title>Recipe Recipe</title>
   </head>
   <body>
@@ -19,11 +15,11 @@
     <nav>
       <nav class="nav">
         <div class="logo">
-          <img src="/practice/images/logo/recipe_logo.png" alt="page-logo" />
+          <img src="images/logo/recipe_logo.png" alt="page-logo" />
         </div>
         <div class="navigator-links">
-          <a class="link" href="/index.html">Home</a>
-          <a class="link" href="">Recipes</a>
+          <a class="link" href="index.html">Home</a>
+          <a class="link" href="recipes.html">Recipes</a>
           <a class="link" href="">Custom</a>
           <button class="button login-button">Log in</button>
         </div>
@@ -46,14 +42,15 @@
       </nav>
     </nav>
     <h1 class="recipes-title">RECIPES</h1>
-    <main class="display">
+    <main class="display" id="recipeDisplay">
       <div class="display__info">
         <div class="display__info-img">
-          <img src="/practice/images/dishes/dish16.jpg" alt="" />
+          <img src="images/dishes/dish16.jpg" alt="" />
         </div>
         <div class="display__info-ingredients">
           <p class="info-ingredients__title">RECIPE NAME</p>
           <p class="info-ingredients__description">
+            INGREDIENTS:<br /><br />
             4 vine-ripened tomatoes,<br />
             finely chopped 2 garlic cloves,<br />
             crushed 1 tbsp finely chopped red onion 2 tbsp finely chopped
@@ -65,14 +62,19 @@
           </p>
         </div>
       </div>
-      <div class="display__process"></div>
+      <div class="display__process">
+        <div class="process--container">
+          <p class="process__title">PROCESS:</p>
+          <div class="process__box"></div>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <p>©2024 Jose Ore, Inc All rights reserved</p>
       <div class="social-media">
-        <img src="/practice/images/logo/fb-logo.png" alt="" />
-        <img src="/practice/images/logo/Instagram-logo.png" alt="" />
-        <img src="/practice/images/logo/tiktok-logo.png" alt="" />
+        <img src="images/logo/fb-logo.png" alt="" />
+        <img src="images/logo/Instagram-logo.png" alt="" />
+        <img src="images/logo/tiktok-logo.png" alt="" />
       </div>
     </footer>
     <script type="module" src="/js/main.js"></script>
