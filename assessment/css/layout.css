@@ -459,6 +459,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 80vh;
 }
 
 .recipe__container {
@@ -476,6 +477,10 @@
 }
 
 /* RECIPES DISPLAY PAGE */
+
+.display {
+  min-height: 70vh;
+}
 
 .display__info {
   display: flex;
@@ -507,7 +512,7 @@
 
 .info-ingredients__description {
   font-size: 20px;
-  width: 70%;
+  padding: 10px;
 }
 
 .display__process {
@@ -528,4 +533,96 @@
   height: auto;
   border: solid black 3px;
   border-radius: 15px;
+}
+
+/* CUSTOM RECIPE*/
+
+.main-container {
+  width: 100%;
+  max-width: 800px; /* Limitar el ancho máximo para pantallas grandes */
+
+  min-height: 75vh;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 auto; /* Centra el contenedor */
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.recipe-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-form__input,
+.recipe-form__select,
+.recipe-form__process textarea,
+.recipe-form__description textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.recipe-form__grid {
+  display: grid;
+  grid-template-columns: 1fr 30px; /* Organiza los inputs y los botones de ayuda */
+  gap: 15px;
+}
+
+.recipe-form__help {
+  align-self: center;
+  background-color: #ddd;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.recipe-form__process {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.submit-button {
+  background-color: #ce3939;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.myrecipe-display {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.myrecipe__container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
 }

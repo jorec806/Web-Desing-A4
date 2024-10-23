@@ -3,15 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="icon" href="images/logo/recipe_logo.png" type="image/png" />
-    <title>Recipe Recipe</title>
+    <title>Document</title>
   </head>
   <body>
-    <!-- Navigator Section -->
     <nav>
       <nav class="nav">
         <div class="logo">
@@ -20,7 +19,6 @@
         <div class="navigator-links">
           <a class="link" href="index.html">Home</a>
           <a class="link" href="recipes.html">Recipes</a>
-          <a class="link" href="myrecipes.html">My Recipes</a>
           <a class="link" href="customrecipe.html">Custom</a>
           <button class="button login-button">Log in</button>
         </div>
@@ -42,10 +40,49 @@
         </svg>
       </nav>
     </nav>
-    <h1 class="recipes-title">RECIPES</h1>
-    <main class="display" id="recipeDisplay"></main>
+    <main class="main-container">
+      <h1 class="title">CREATE YOUR RECIPE</h1>
+      <div class="form" id="recipeFormContainer">
+        <form class="recipe-form" id="recipeForm">
+          <input
+            type="text"
+            placeholder="Recipe name"
+            class="recipe-form__input"
+            name="product_name"
+          />
+          <div class="recipe-form__grid">
+            <label class="recipe-form__description">
+              Ingredientes
+              <textarea
+                rows="4"
+                name="product_owner"
+                maxlength="255"
+                placeholder="Please add your ingredients in the following way: 500gr of chicken, 1kg of rice..."
+              ></textarea>
+            </label>
+          </div>
+          <div class="recipe-form__description">
+            <label>
+              Process
+              <textarea rows="6" name="product_description"></textarea>
+            </label>
+          </div>
+          <div class="recipe-form__description">
+            <label>
+              Product Photo
+              <input type="file" name="product_photo" accept="image/*" />
+            </label>
+          </div>
+          <button type="submit" class="submit-button" id="submitButton">
+            Create!
+          </button>
+        </form>
+      </div>
+    </main>
     <footer class="footer">
-      <p>©2024 Jose Ore, Inc All rights reserved</p>
+      <div>
+        <p>©2024 Jose Ore, Inc All rights reserved</p>
+      </div>
       <div class="social-media">
         <img src="images/logo/fb-logo.png" alt="" />
         <img src="images/logo/Instagram-logo.png" alt="" />

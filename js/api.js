@@ -111,7 +111,7 @@ async function renderMeal(parent) {
   }
 }
 
-async function renderRecipe() {
+async function renderRecipe(parent) {
   try {
     const mealID = localStorage.getItem("selectedMealID");
     const meal = await getMealInfo(mealID);
@@ -136,8 +136,9 @@ async function renderRecipe() {
     //List of ingredients
     function printIngredients(listOfIngredients) {
       let list = "";
-      for (items in listOfIngredients) {
-        ingred = `• ${ingred}<br />`;
+
+      for (let items of listOfIngredients) {
+        let ingred = `• ${items}<br />`;
         list += ingred;
       }
 
@@ -170,11 +171,13 @@ async function renderRecipe() {
     </div>`;
 
     //Clear HTML
+    parent.innerHTML = "";
+
+    //Render recipe
+    parent.innerHTML = recipeInfo;
   } catch (error) {
     console.error("Error rendering the meal recipe:", error);
   }
 }
-
-renderRecipe();
 
 export { renderMeal, renderRecipe };
